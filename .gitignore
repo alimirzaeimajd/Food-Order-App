@@ -1,6 +1,7 @@
 node_modules
-package-lock.json
-yarn.lock
 manifest.json
 robots.txt
 .vscode
+package-lock.json
+node_modules
+yarn.lock
