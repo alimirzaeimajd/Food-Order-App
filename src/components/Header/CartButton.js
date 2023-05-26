@@ -1,10 +1,9 @@
 import React from 'react'
-import classes from './CartButton.module.css'
 
 const CartButton = (props) => {
     return (
-        <button className={classes.button} onClick={props.onClick}>
-            <span className={classes.icon}>
+        <button className="button" onClick={props.onClick}>
+            <span className="icon">
                 <span className="material-symbols-outlined">
                     shopping_cart
                 </span>
