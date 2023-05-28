@@ -1,5 +1,4 @@
-import React from 'react'
-import Input from '../../UI/Input'
+import Input from '../../UI/Input';
 
 const MealForm = (props) => {
     return (
@@ -17,7 +16,7 @@ const MealForm = (props) => {
             />
             <button>+ Add</button>
         </form>
-    )
-}
+    );
+};
 
-export default MealForm
+export default MealForm;

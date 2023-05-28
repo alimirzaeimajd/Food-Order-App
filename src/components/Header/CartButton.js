@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartButton = (props) => {
     return (
-        <button className="button" onClick={props.onClick}>
+        <button className="button" onClick={props.showCart}>
             <span className="icon">
                 <span className="material-symbols-outlined">
                     shopping_cart

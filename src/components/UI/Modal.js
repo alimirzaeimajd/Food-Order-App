@@ -1,27 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 
-const Backdrop = props => {
-    return <div className='backdrop' />
-}
+const Backdrop = (props) => {
+    return <div className='backdrop' onClick={props.hideCart} />;
+};
 
-const ModalOverlay = props => {
+const ModalOverlay = (props) => {
     return (
         <div className='modal'>
             <div className='content'>{props.children}</div>
         </div>
-    )
-}
+    );
+};
 
-const portal = document.getElementById('overlay');
+const portalElement = document.getElementById('overlay');
 
 const Modal = (props) => {
     return (
-        <>
-            {ReactDOM.createPortal(<Backdrop />, portal)}
-            {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portal)}
-        </>
-    )
-}
+        <Fragment>
+            {ReactDOM.createPortal(<Backdrop />, portalElement)}
+            {ReactDOM.createPortal(
+                <ModalOverlay>{props.children}</ModalOverlay>,
+                portalElement
+            )}
+        </Fragment>
+    );
+};
 
-export default Modal
+export default Modal;
